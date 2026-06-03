@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { AboutSection } from "@/components/AboutSection";
 import { WhyUs } from "@/components/WhyUs";
+import { AboutGallery } from "@/components/AboutGallery";
 
 const TITLE = "Über Uns – SCHRITT KW GmbH | Isolierfirma Wien";
 const DESC =
@@ -32,6 +33,7 @@ function Page() {
       />
       <AboutSection />
       <WhyUs />
+      <AboutGallery />
     </SiteLayout>
   );
 }
