@@ -27,6 +27,8 @@ export function Footer() {
           <ul className="space-y-2.5 text-sm">
             {[
               { to: "/", label: "Startseite" },
+              { to: "/startseite2", label: "Startseite 2" },
+              { to: "/startseite3", label: "Startseite 3" },
               { to: "/ueber-uns", label: "Über Uns" },
               { to: "/leistungen", label: "Leistungen" },
               { to: "/referenzen", label: "Referenzen" },
