@@ -16,7 +16,11 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "Isoliertechnik Wien, Wärmedämmung Wien, Kälteisolierung Wien, Schallschutz Wien, Brandschutz Wien, Isolierfirma Wien" },
+      {
+        name: "keywords",
+        content:
+          "Isoliertechnik Wien, Wärmedämmung Wien, Kälteisolierung Wien, Schallschutz Wien, Brandschutz Wien, Isolierfirma Wien",
+      },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:url", content: "/" },

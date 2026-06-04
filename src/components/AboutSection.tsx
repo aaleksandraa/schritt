@@ -10,7 +10,12 @@ const POINTS = [
   "Fachgerechte Montage durch erfahrene Spezialisten",
 ];
 
-const QUALITIES = ["Termintreue", "Saubere Arbeit", "Hohe Qualitätsstandards", "Persönliche Beratung"];
+const QUALITIES = [
+  "Termintreue",
+  "Saubere Arbeit",
+  "Hohe Qualitätsstandards",
+  "Persönliche Beratung",
+];
 
 export function AboutSection() {
   return (
@@ -43,9 +48,9 @@ export function AboutSection() {
             Qualität, Sicherheit und Effizienz
           </h2>
           <p className="mt-5 text-lg text-muted-foreground leading-relaxed">
-            Als inhabergeführtes Unternehmen in Wien stehen wir für maßgeschneiderte Lösungen
-            im Bereich der Isoliertechnik. Egal ob Gewerbeobjekt oder Wohnbau – wir bieten
-            Ihnen umfassenden Schutz aus einer Hand.
+            Als inhabergeführtes Unternehmen in Wien stehen wir für maßgeschneiderte Lösungen im
+            Bereich der Isoliertechnik. Egal ob Gewerbeobjekt oder Wohnbau – wir bieten Ihnen
+            umfassenden Schutz aus einer Hand.
           </p>
 
           <ul className="mt-8 space-y-3">

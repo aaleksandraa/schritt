@@ -22,7 +22,13 @@ export const Route = createFileRoute("/leistungen")({
   component: Page,
 });
 
-const DETAILS: { slug: string; icon: LucideIcon; title: string; lead: string; bullets: string[] }[] = [
+const DETAILS: {
+  slug: string;
+  icon: LucideIcon;
+  title: string;
+  lead: string;
+  bullets: string[];
+}[] = [
   {
     slug: "waermedaemmung",
     icon: Flame,

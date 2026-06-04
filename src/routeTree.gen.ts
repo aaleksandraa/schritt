@@ -12,7 +12,6 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as UeberUnsRouteImport } from './routes/ueber-uns'
 import { Route as Startseite3RouteImport } from './routes/startseite3'
 import { Route as Startseite2RouteImport } from './routes/startseite2'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReferenzenRouteImport } from './routes/referenzen'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
 import { Route as KontaktRouteImport } from './routes/kontakt'
@@ -31,11 +30,6 @@ const Startseite3Route = Startseite3RouteImport.update({
 const Startseite2Route = Startseite2RouteImport.update({
   id: '/startseite2',
   path: '/startseite2',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReferenzenRoute = ReferenzenRouteImport.update({
@@ -64,7 +58,6 @@ export interface FileRoutesByFullPath {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/startseite2': typeof Startseite2Route
   '/startseite3': typeof Startseite3Route
   '/ueber-uns': typeof UeberUnsRoute
@@ -74,7 +67,6 @@ export interface FileRoutesByTo {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/startseite2': typeof Startseite2Route
   '/startseite3': typeof Startseite3Route
   '/ueber-uns': typeof UeberUnsRoute
@@ -85,7 +77,6 @@ export interface FileRoutesById {
   '/kontakt': typeof KontaktRoute
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
-  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/startseite2': typeof Startseite2Route
   '/startseite3': typeof Startseite3Route
   '/ueber-uns': typeof UeberUnsRoute
@@ -97,7 +88,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
-    | '/sitemap.xml'
     | '/startseite2'
     | '/startseite3'
     | '/ueber-uns'
@@ -107,7 +97,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
-    | '/sitemap.xml'
     | '/startseite2'
     | '/startseite3'
     | '/ueber-uns'
@@ -117,7 +106,6 @@ export interface FileRouteTypes {
     | '/kontakt'
     | '/leistungen'
     | '/referenzen'
-    | '/sitemap.xml'
     | '/startseite2'
     | '/startseite3'
     | '/ueber-uns'
@@ -128,7 +116,6 @@ export interface RootRouteChildren {
   KontaktRoute: typeof KontaktRoute
   LeistungenRoute: typeof LeistungenRoute
   ReferenzenRoute: typeof ReferenzenRoute
-  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   Startseite2Route: typeof Startseite2Route
   Startseite3Route: typeof Startseite3Route
   UeberUnsRoute: typeof UeberUnsRoute
@@ -155,13 +142,6 @@ declare module '@tanstack/react-router' {
       path: '/startseite2'
       fullPath: '/startseite2'
       preLoaderRoute: typeof Startseite2RouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/referenzen': {
@@ -200,7 +180,6 @@ const rootRouteChildren: RootRouteChildren = {
   KontaktRoute: KontaktRoute,
   LeistungenRoute: LeistungenRoute,
   ReferenzenRoute: ReferenzenRoute,
-  SitemapDotxmlRoute: SitemapDotxmlRoute,
   Startseite2Route: Startseite2Route,
   Startseite3Route: Startseite3Route,
   UeberUnsRoute: UeberUnsRoute,
@@ -208,13 +187,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
