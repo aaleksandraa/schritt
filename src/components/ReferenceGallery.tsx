@@ -8,26 +8,31 @@ const CLIENTS = [
   {
     name: "DS Smith Packaging Austria GmbH",
     logo: dsSmithLogo,
+    darkLogoPanel: false,
     text: "Technische Dämmarbeiten an Produktions- und Versorgungsleitungen. Die Ausführung erfolgte sauber koordiniert und abgestimmt auf den laufenden Betrieb.",
   },
   {
     name: "Ottakringer Brauerei",
     logo: ottakringerLogo,
+    darkLogoPanel: false,
     text: "Isolierung von Anlagenbereichen und Rohrleitungen im Brauereiumfeld. Der Fokus lag auf effizienter Montage und widerstandsfähigen Oberflächen.",
   },
   {
     name: "MEWA Textil-Service GmbH",
     logo: mewaLogo,
+    darkLogoPanel: false,
     text: "Dämmung technischer Leitungen und Anlagen zur Unterstützung energieeffizienter Prozesse. Die Umsetzung erfolgte nach Projektvorgabe und Terminplan.",
   },
   {
     name: "Vöslauer Mineralwasser",
     logo: voeslauerLogo,
+    darkLogoPanel: false,
     text: "Wärme- und Kälteisolierung an gebäudetechnischen Anlagen. Montiert wurden langlebige Dämmaufbauten für einen zuverlässigen Betrieb.",
   },
   {
     name: "Lindner GmbH",
     logo: lindnerLogo,
+    darkLogoPanel: true,
     text: "Brandschutz- und Isolierarbeiten in technischen Bereichen. Die Arbeiten wurden gewerkeübergreifend koordiniert und normgerecht ausgeführt.",
   },
 ];
@@ -56,7 +61,11 @@ export function ReferenceGallery({ heading = true }: { heading?: boolean }) {
               className="rounded-lg border border-border bg-white p-6"
               style={{ boxShadow: "var(--shadow-card)" }}
             >
-              <div className="flex h-32 items-center justify-center rounded-md bg-primary px-8">
+              <div
+                className={`flex h-32 items-center justify-center rounded-md border border-border px-8 ${
+                  client.darkLogoPanel ? "bg-primary" : "bg-white"
+                }`}
+              >
                 <img
                   src={client.logo}
                   alt={`${client.name} Logo`}
