@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Check, ArrowRight } from "lucide-react";
-import refPipework from "@/assets/ref-pipework.jpg";
-import refHvac from "@/assets/ref-hvac.jpg";
+import mainAboutImage from "@/assets/galerija/WhatsApp-Image-2026-05-13-at-09.42.45-2.jpeg";
+import smallAboutImage from "@/assets/galerija/WhatsApp-Image-2026-05-13-at-09.44.25-2-1.jpeg";
 
 const POINTS = [
   "Kälte- und Wärmeschutz zur Optimierung der Energiebilanz",
@@ -23,7 +23,7 @@ export function AboutSection() {
       <div className="container-x grid gap-16 lg:grid-cols-2 items-center">
         <div className="relative">
           <img
-            src={refPipework}
+            src={mainAboutImage}
             alt="Industrielle Rohrisolierung in Wien"
             loading="lazy"
             width={1024}
@@ -32,7 +32,7 @@ export function AboutSection() {
             style={{ boxShadow: "var(--shadow-elevated)" }}
           />
           <img
-            src={refHvac}
+            src={smallAboutImage}
             alt="Montage einer Lüftungsdämmung"
             loading="lazy"
             width={1024}
