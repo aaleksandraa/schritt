@@ -22,7 +22,7 @@ export function AboutGallery() {
     <section id="galerija" className="section-y bg-white">
       <div className="container-x">
         <div className="mb-12 max-w-2xl">
-          <span className="eyebrow">Galerija</span>
+          <span className="eyebrow">Galerie</span>
           <h2 className="mt-3 text-3xl font-bold text-primary md:text-5xl">
             Einblicke in unsere Arbeit
           </h2>

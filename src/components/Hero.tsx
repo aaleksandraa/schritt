@@ -121,8 +121,8 @@ export function Hero({ variant = "dark" }: { variant?: "dark" | "light" }) {
           style={{ animationDelay: "0.4s" }}
         >
           {[
-            { v: "20+", l: "Jahre Erfahrung" },
-            { v: "500+", l: "Projekte" },
+            { v: "2", l: "Jahre Erfahrung" },
+            { v: "20+", l: "Projekte" },
             { v: "100%", l: "Termintreue" },
             { v: "Wien", l: "& Umgebung" },
           ].map((s) => (
