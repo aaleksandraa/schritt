@@ -3,9 +3,9 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { PageHero } from "@/components/PageHero";
 import { ReferenceGallery } from "@/components/ReferenceGallery";
 
-const TITLE = "Referenzen – Projekte | SCHRITT KW Isoliertechnik Wien";
+const TITLE = "Referenzen – Kunden | SCHRITT KW Isoliertechnik Wien";
 const DESC =
-  "Ausgewählte Referenzprojekte aus Gewerbe, Industrie, Wohnbau und technischen Anlagen – ausgeführt von SCHRITT KW GmbH in Wien.";
+  "Ausgewählte Kunden und Referenzen aus Gewerbe, Industrie und technischen Anlagen – ausgeführt von SCHRITT KW GmbH in Wien.";
 
 export const Route = createFileRoute("/referenzen")({
   head: () => ({
@@ -26,8 +26,8 @@ function Page() {
     <SiteLayout>
       <PageHero
         eyebrow="Referenzen"
-        title="Unsere Projekte"
-        subtitle="Ein Auszug aus unserer Arbeit für Gewerbe, Industrie, Wohnbau und technische Anlagen."
+        title="Unsere Kunden"
+        subtitle="Ein Auszug aus Referenzen, für die wir technische Isolierarbeiten umgesetzt haben."
       />
       <ReferenceGallery heading={false} />
     </SiteLayout>
