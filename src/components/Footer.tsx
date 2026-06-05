@@ -5,8 +5,8 @@ import logoImage from "@/assets/Logo.png";
 export function Footer() {
   return (
     <footer className="bg-[color:var(--anthracite)] text-white/80">
-      <div className="container-x grid gap-12 py-16 md:grid-cols-3">
-        <div>
+      <div className="container-x grid gap-12 py-16 text-center md:grid-cols-3 md:text-left">
+        <div className="flex flex-col items-center md:items-start">
           <img
             src={logoImage}
             alt="SCHRITT KW Isoliertechnik"
@@ -14,7 +14,7 @@ export function Footer() {
             width={140}
             height={56}
           />
-          <p className="text-sm leading-relaxed text-white/65 max-w-xs">
+          <p className="max-w-xs text-sm leading-relaxed text-white/65">
             Ihr Spezialist für professionelle Isoliertechnik in Wien – Kälte-, Wärme-, Schall- und
             Brandschutz aus einer Hand.
           </p>
@@ -47,8 +47,8 @@ export function Footer() {
             Kontakt
           </h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-3">
-              <MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+            <li className="flex justify-center gap-3 md:justify-start">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <span>
                 SCHRITT KW GmbH
                 <br />
@@ -57,14 +57,14 @@ export function Footer() {
                 1200 Wien
               </span>
             </li>
-            <li className="flex gap-3">
-              <Phone className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+            <li className="flex justify-center gap-3 md:justify-start">
+              <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <a href="tel:+436604620390" className="hover:text-accent transition-colors">
                 +43 660 4620390
               </a>
             </li>
-            <li className="flex gap-3">
-              <Mail className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+            <li className="flex justify-center gap-3 md:justify-start">
+              <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <a href="mailto:office@schritt-kw.at" className="hover:text-accent transition-colors">
                 office@schritt-kw.at
               </a>
@@ -74,7 +74,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="container-x py-6 flex flex-col md:flex-row gap-3 justify-between text-xs text-white/55">
+        <div className="container-x flex flex-col items-center justify-between gap-3 py-6 text-center text-xs text-white/55 md:flex-row md:text-left">
           <p>© {new Date().getFullYear()} SCHRITT KW GmbH. Alle Rechte vorbehalten.</p>
           <p>UID: ATU81471729 · FN 640179s</p>
         </div>
